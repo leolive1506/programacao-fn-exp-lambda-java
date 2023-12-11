@@ -19,8 +19,8 @@ public class App {
         // list.forEach(new ProductUpdate());
         // list.forEach(Product::priceUpdate);
         // list.forEach(Product::nonStaticPriceUpdate);
-        Consumer<Product> cons = product -> product.setPrice(product.getPrice() * 1.1);
-        list.forEach(cons);
+        // Consumer<Product> cons = product -> product.setPrice(product.getPrice() * 1.1);
+        list.forEach(product -> product.setPrice(product.getPrice() * 1.1));
         list.forEach(System.out::println);
         
 
