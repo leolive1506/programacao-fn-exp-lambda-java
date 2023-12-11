@@ -23,5 +23,15 @@ public class Index {
     ).map(p -> p[0]);
 
     System.out.println(Arrays.toString(st4.limit(10).toArray()));
+
+    // pipeline
+    int sum = list.stream().reduce(0, (x, y) -> x + y);
+    System.out.println("SUM = " + sum);
+
+    List<Integer> newList = list.stream()
+      .filter(x -> x % 2 == 0)
+      .map(x -> x * 10)
+      .toList();
+    System.out.println(Arrays.toString(newList.toArray()));
   }
 }
