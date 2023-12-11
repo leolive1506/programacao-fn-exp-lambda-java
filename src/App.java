@@ -16,7 +16,8 @@ public class App {
         list.add(new Product("Tablet", 1200.0));
 
         // list.forEach(new ProductUpdate());
-        list.forEach(Product::priceUpdate);
+        // list.forEach(Product::priceUpdate);
+        list.forEach(Product::nonStaticPriceUpdate);
         list.forEach(System.out::println);
         
 
