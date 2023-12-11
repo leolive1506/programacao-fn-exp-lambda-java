@@ -13,7 +13,9 @@ public class App {
         list.add(new Product("Notebook", 1200.0));
         list.add(new Product("Tablet", 1200.0));
 
-        list.removeIf(new ProductPredicate());
+        // list.removeIf(new ProductPredicate());
+        list.removeIf(Product::productPredicate);
+
         for (Product p : list) {
             System.out.println(p);
         }
