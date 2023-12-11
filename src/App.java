@@ -14,9 +14,7 @@ public class App {
 
         // Collection.sort(list);
         // classe anonima
-        Comparator<Product> comp = (p1, p2) -> {
-            return p1.getName().toLowerCase().compareTo(p2.getName().toLowerCase());
-        };
+        Comparator<Product> comp = (p1, p2) -> p1.getName().toLowerCase().compareTo(p2.getName().toLowerCase());
 
         // list.sort(new MyComparator());
         list.sort(comp);
