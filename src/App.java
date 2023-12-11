@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 import product.ProductPredicate;
 import product.entities.Product;
@@ -15,7 +16,9 @@ public class App {
 
         // list.removeIf(new ProductPredicate());
         // list.removeIf(Product::productPredicate);
-        list.removeIf(Product::nonStaticproductPredicate);
+        // list.removeIf(Product::nonStaticproductPredicate);
+        Predicate<Product> pred = product -> product.getPrice() >= 100;
+        list.removeIf(pred);
 
         for (Product p : list) {
             System.out.println(p);
