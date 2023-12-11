@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 import product.ProductPredicate;
@@ -17,7 +18,9 @@ public class App {
 
         // list.forEach(new ProductUpdate());
         // list.forEach(Product::priceUpdate);
-        list.forEach(Product::nonStaticPriceUpdate);
+        // list.forEach(Product::nonStaticPriceUpdate);
+        Consumer<Product> cons = product -> product.setPrice(product.getPrice() * 1.1);
+        list.forEach(cons);
         list.forEach(System.out::println);
         
 
