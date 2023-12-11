@@ -31,3 +31,5 @@ list.removeIf(product -> product.getPrice() >= 100);
 # Function
 - interface Funcion<Recebe, Retorna>
 - Retorna apply(Recebe t)
+
+# Funções que recebem funções como argumento
