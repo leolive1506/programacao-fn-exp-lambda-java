@@ -15,8 +15,10 @@ public class App {
         list.add(new Product("Notebook", 1200.0));
         list.add(new Product("Tablet", 1200.0));
 
-        list.forEach(new ProductUpdate());
+        // list.forEach(new ProductUpdate());
+        list.forEach(Product::priceUpdate);
         list.forEach(System.out::println);
         
+
     }
 }
