@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import product.MyComparator;
@@ -12,7 +13,16 @@ public class App {
         list.add(new Product("Tablet", 1200.0));
 
         // Collection.sort(list);
-        list.sort(new MyComparator());
+        // classe anonima
+        Comparator<Product> comp = new Comparator<Product>() {  
+            @Override
+            public int compare(Product p1, Product p2) {
+                return p1.getName().toLowerCase().compareTo(p2.getName().toLowerCase());
+            }  
+        };
+
+        // list.sort(new MyComparator());
+        list.sort(comp);
 
         for (Product p: list) {
             System.out.println(p);
