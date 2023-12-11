@@ -14,7 +14,8 @@ public class App {
         list.add(new Product("Tablet", 1200.0));
 
         // list.removeIf(new ProductPredicate());
-        list.removeIf(Product::productPredicate);
+        // list.removeIf(Product::productPredicate);
+        list.removeIf(Product::nonStaticproductPredicate);
 
         for (Product p : list) {
             System.out.println(p);
