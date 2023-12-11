@@ -25,3 +25,6 @@
 ```java
 list.removeIf(product -> product.getPrice() >= 100);
 ```
+# Consumer
+- void accept(T t);
+- a partir de uma lista de produtos, aumente preço em 10%;

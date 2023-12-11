@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 import product.ProductPredicate;
+import product.ProductUpdate;
 import product.entities.Product;
 
 public class App {
@@ -14,14 +15,8 @@ public class App {
         list.add(new Product("Notebook", 1200.0));
         list.add(new Product("Tablet", 1200.0));
 
-        // list.removeIf(new ProductPredicate());
-        // list.removeIf(Product::productPredicate);
-        // list.removeIf(Product::nonStaticproductPredicate);
-        // Predicate<Product> pred = product -> product.getPrice() >= 100;
-        list.removeIf(product -> product.getPrice() >= 100);
-
-        for (Product p : list) {
-            System.out.println(p);
-        }
+        list.forEach(new ProductUpdate());
+        list.forEach(System.out::println);
+        
     }
 }
