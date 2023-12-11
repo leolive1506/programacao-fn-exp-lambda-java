@@ -17,8 +17,8 @@ public class App {
         // list.removeIf(new ProductPredicate());
         // list.removeIf(Product::productPredicate);
         // list.removeIf(Product::nonStaticproductPredicate);
-        Predicate<Product> pred = product -> product.getPrice() >= 100;
-        list.removeIf(pred);
+        // Predicate<Product> pred = product -> product.getPrice() >= 100;
+        list.removeIf(product -> product.getPrice() >= 100);
 
         for (Product p : list) {
             System.out.println(p);
