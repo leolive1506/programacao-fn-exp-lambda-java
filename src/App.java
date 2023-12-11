@@ -14,7 +14,11 @@ public class App {
         list.add(new Product("HD Case", 80.90));        
         
         ProductService ps = new ProductService();
-        double sum = ps.filteredSum(list);
+        double sum = ps.filteredSum(list, p -> p.getName().charAt(0) == 'T');
+        double sumM = ps.filteredSum(list, p -> p.getName().charAt(0) == 'M');
+        double sumMinus = ps.filteredSum(list, p -> p.getPrice() < 100);
         System.out.println("Sum = " + String.format("%.2f", sum));
+        System.out.println("Sum = " + String.format("%.2f", sumM));
+        System.out.println("Sum = " + String.format("%.2f", sumMinus));
     }
 }
