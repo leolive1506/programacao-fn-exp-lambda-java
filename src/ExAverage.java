@@ -17,7 +17,7 @@ import product.entities.Product;
 
 public class ExAverage {
   public static void main() {
-    String path = "../in.csv";
+    String path = "../avg.csv";
     try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
       List<Product> products = new ArrayList<>();
       String line = reader.readLine();
